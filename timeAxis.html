@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>时光轴</title>
+		<style type="text/css">
+			body{
+				background: url(images/1.jpg) #1c0c0f center 0 no-repeat fixed; 
+				margin: 0;
+				padding: 0;
+				padding-top: 41px;
+			}
+
+			.top{
+			    width: 100%;
+				height: 41px;
+				position: fixed;
+				top: 0px;
+				background: #001E3B;
+				z-index: 99;
+				box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+			}
+
+			.header{
+			    width: 960px;
+			    height: 200px;
+			    margin: 0px auto;
+			    background: rgba(2225,2225,2225,.2);
+			}
+
+			.container{
+				width: 960px;
+			    margin: 0px auto;
+			    position: relative;
+			}
+
+			.scrubber{
+				width: 47px;
+			    min-height: 200px;
+			    position: absolute;
+			    top: 29px;
+			    left: 0px;
+			    z-index: 999;
+			    background: rgba(255,255,255,.2);
+			}
+
+			.content{
+			    min-height: 1000px;
+			    background: url(images/spine.png) repeat-y 121px 0;
+			    padding: 50px;
+			    padding-top: 50px;
+			    padding-left: 160px;
+			    position: relative;
+			}
+
+			.scrubber a{
+				display: block;
+			    height: 26px;
+			    line-height: 26px;
+			    font-size: 12px;
+			    border-right: 2px solid #c8c8c8;
+			    border-right-color: rgba(200,200,200,.5);
+			    padding-right: 5px;
+			    color: #a5a5a5;
+			    text-decoration: none;
+			    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+			    text-align: right;
+			}
+
+			.scrubber a:hover,
+			.scrubber a.current{
+			    border-right-color: #7ebad0;
+			    color: #7ebad0;
+			    font-weight: bold;
+			}
+
+			.scrubber a:hover{text-decoration: underline;}
+			.scrubber a.current{text-decoration: none;}
+			/*content content_item*/
+			.content_year,
+			.content_month{
+				height: 30px;
+			    line-height: 30px;
+			    color: #a5a5a5;
+			    text-shadow: 0 1px rgba(0,0,0,1);
+			    font-size: 14px;
+			    position: relative;
+			    left: -99px;
+			    clear: both;
+			}
+
+			.content_item{
+				width: 370px;
+			    min-height: 300px;
+			    background: #fff;
+			    border-radius: 4px;
+			    margin: 20px 0px 0 0;
+			    position: relative;
+			    color: #888;
+			}
+			.content_item_icon_arrow{
+				position: absolute;
+			    left: -10px;
+			    top: 20px;
+			    height: 0px;
+			    border-color: transparent #fff transparent transparent;
+			    border-width: 10px 10px 10px 0px;
+			    border-style: dashed solid dashed dashed;
+			}
+			.content_item_icon_dot{
+				width: 11px;
+			    height: 11px;
+			    border-radius: 11px;
+			    background: #fff;
+			    position: absolute;
+			    left: -43px;
+			    top: 25px;
+			}
+			.content_item_head{}
+			.content_item_media{}
+			.content_item_footer{}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="top"></div>
+		<div class="header"></div>
+		<div class="container">
+			<div class="scrubber">
+				<a href="javascript:;" class="scrubber_year current">2014</a>
+				<a href="javascript:;" class="scrubber_month">3月</a>
+				<a href="javascript:;" class="scrubber_month">2月</a>
+			</div>
+			<div class="content">
+				<div class="content_year">2014年</div>
+				<div class="content_month">3月</div>
+
+				<div class="content_item">
+					<div class="content_item_icon_arrow"></div>
+					<div class="content_item_icon_dot"></div>
+					<div class="content_item_head">...</div>
+					<div class="content_item_media"></div>
+					<div class="content_item_footer">...</div>
+				</div>
+			</div>
+		</div>
+	</body>	
+</html>
